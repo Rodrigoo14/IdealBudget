@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="verdeLima">#7FFF00</color> <!-- Verde lima -->
+
+        <color name="colorFondo">#F5F5F5</color>
+        <color name="colorTextoTitulo">#4CAF50</color>
+        <color name="colorFondoTitulo">#FFFFFF</color>
+
+    <color name="colorPrimary">#F4673A</color>
+
+
+</resources>
