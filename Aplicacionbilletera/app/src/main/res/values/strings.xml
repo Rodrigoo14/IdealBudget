@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">IdealBudget</string>
+    <string name="hint_cui">CUI</string>
+    <string name="hint_nombres">Nombres</string>
+    <string name="hint_apellidos">Apellidos</string>
+    <string name="hint_correo">Correo</string>
+    <string name="hint_contra">Contra</string>
+    <string name="btn_registrar">Registrar</string>
 </resources>

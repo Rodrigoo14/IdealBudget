@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Expenses">
+
+    <!-- Título "IdealBudget" -->
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IdealBudget"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textColor="@color/colorTextoTitulo"
+        android:background="@color/colorFondoTitulo"/>
+
+    <!-- EditText para la descripción -->
+    <EditText
+        android:id="@+id/edtDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripción"
+        android:inputType="text"
+        android:layout_below="@id/txtTitulo"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/edittext_personalizado"/>
+
+    <!-- EditText para el monto -->
+    <EditText
+        android:id="@+id/edtMonto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Monto"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/edtDescripcion"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_personalizado"/>
+
+    <Button
+        android:id="@+id/btnAgregar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar Registro"
+        android:background="@drawable/boton_personalizado"
+        android:layout_below="@id/edtMonto"
+        android:layout_marginTop="16dp"/>
+
+
+
+
+
+    <!-- Lista de registros -->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAgregar"
+        android:layout_marginTop="24dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"/>
+
+    <!-- Botón para cambiar y ver el gráfico -->
+    <Button
+        android:id="@+id/btnVerGrafico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Gráfico"
+        android:layout_below="@id/listView"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:background="@drawable/boton_personalizado"/>
+
+    <!-- GraphView para mostrar el gráfico de gastos -->
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:visibility="gone"
+        android:layout_below="@id/btnVerGrafico"
+        android:layout_marginTop="24dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

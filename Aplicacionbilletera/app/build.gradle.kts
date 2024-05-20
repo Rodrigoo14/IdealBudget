@@ -1,14 +1,13 @@
-
 plugins {
     alias(libs.plugins.androidApplication)
 }
 
 android {
-    namespace = "com.example.aplicacionbilletera"
+    namespace = "com.example.idealbudget"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.aplicacionbilletera"
+        applicationId = "com.example.idealbudget"
         minSdk = 28
         targetSdk = 34
         versionCode = 1
@@ -31,7 +30,6 @@ android {
 
 dependencies {
 
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -39,9 +37,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation("com.jjoe64:graphview:4.2.2")
-
-
-
 }
-

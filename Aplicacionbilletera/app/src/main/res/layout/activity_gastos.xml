@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF8F8"
+    tools:context=".Gastos">
+
+    <View
+        android:id="@+id/viewGreenBackgroundTop"
+        android:layout_width="0dp"
+        android:layout_height="173dp"
+        android:background="@drawable/curved_teal_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/viewGreenBackgroundBottom"
+        android:layout_width="378dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/curved_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewGreenBackgroundBottom3"
+        android:layout_width="378dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="392dp"
+        android:background="@drawable/curved_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateIds" />
+
+    <!-- Campo de entrada para nuevo gasto -->
+
+    <!-- Título: Descripción -->
+
+    <TextView
+        android:id="@+id/textViewBienvenido"
+        android:layout_width="170dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:text="Gastos"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewGreenBackgroundTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.672"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.388" />
+
+    <!-- Campo de entrada para descripción -->
+
+    <TextView
+        android:id="@+id/textViewGasto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nuevo Gasto"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNewExpense"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewGreenBackgroundBottom"
+        app:layout_constraintVertical_bias="0.804" />
+
+    <EditText
+        android:id="@+id/editTextNewExpense"
+        android:layout_width="319dp"
+        android:layout_height="68dp"
+        android:hint="Ingrese el monto del nuevo gasto"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/viewGreenBackgroundBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewGreenBackgroundBottom"
+        app:layout_constraintVertical_bias="0.714" />
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="Descripción"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewGreenBackgroundBottom2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNewExpense"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="336dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:hint="Ingrese una breve descripción"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewGreenBackgroundBottom2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescription"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="138dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="112dp"
+        android:background="@drawable/rounded_button"
+        android:drawableLeft="@drawable/custom_button"
+        android:text="Guardar Gasto"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/viewGreenBackgroundBottom2"
+        android:layout_width="480dp"
+        android:layout_height="96dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/curved_teal_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <GridView
+        android:id="@+id/gridViewSingleItem"
+        android:layout_width="421dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="24dp"
+        android:numColumns="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

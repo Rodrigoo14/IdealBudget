@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+
+    <View
+        android:id="@+id/viewGreenBackgroundTop"
+        android:layout_width="0dp"
+        android:layout_height="173dp"
+        android:background="@drawable/curved_teal_background"
+        app:layout_constraintBottom_toTopOf="@+id/textViewCategories"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textViewBienvenido"
+        android:layout_width="170dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:text="Bienvenido"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewGreenBackgroundTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.116" />
+
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="170dp"
+        android:layout_height="42dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewGreenBackgroundTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBienvenido"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <TextView
+        android:id="@+id/textViewCategories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Categorías"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewGreenBackgroundTop" />
+
+    <GridView
+        android:id="@+id/gridViewCategories"
+        android:layout_width="333dp"
+        android:layout_height="186dp"
+        android:numColumns="3"
+        app:layout_constraintBottom_toTopOf="@+id/viewGreenBackgroundBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCategories"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <TextView
+        android:id="@+id/textViewMovimientos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"
+        android:text="Realizar movimientos"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewGreenBackgroundTop"
+        app:layout_constraintVertical_bias="0.067" />
+
+    <Button
+        android:id="@+id/btnIngreso"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/teal_background"
+        android:text="Crear nuevo ingreso"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/btnGasto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMovimientos" />
+
+    <Button
+        android:id="@+id/btnGasto"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="124dp"
+        android:background="@drawable/teal_background"
+        android:text="Crear nuevo gasto"
+        android:textColor="#0B0B0B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMovimientos"
+        app:layout_constraintVertical_bias="0.736" />
+
+    <View
+        android:id="@+id/viewGreenBackgroundBottom"
+        android:layout_width="480dp"
+        android:layout_height="96dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/curved_teal_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <GridView
+        android:id="@+id/gridViewSingleItem"
+        android:layout_width="421dp"
+        android:layout_height="47dp"
+        android:numColumns="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridViewCategories"
+        app:layout_constraintVertical_bias="0.906" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
